@@ -3,7 +3,7 @@ Master CLI commands through interactive flashcards,  a engaging game, and a know
 
 1.	Download the zip file 
 2.	Extract the combined folder 
-3.	Open the “main.html” file inside of the combined folder in your browser.
+3.	Open the “index.html” file inside of the combined folder in your browser.
 4.	In the website click one of the options “Flashcards”, “Flashcards-GAME”, or “CLI-GAME” to open the one part of the website 
 
 •	Flashcards 
