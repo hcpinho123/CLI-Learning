@@ -10,12 +10,6 @@ Master CLI commands through interactive flashcards,  a engaging game, and a know
 1.	Move your mouse over a term to flip the flashcard and see its definition 
 2.	Press the “Go back to ClI menu” button to go back to the website menu
 
-•	FLASHCARDS-GAME 
-1.	Click the ‘Start Button’
-2.	Hover over the card visual to reveal the term’s definition
-3.	Select how difficult it was to recall the definition 
-4.	Depending on the difficulty, the card will reappear in a corresponding countdown
-
 •	CLI -GAME 
 1.	Read the instructions in green before inputting a command.
 2.	Enter a valid command
