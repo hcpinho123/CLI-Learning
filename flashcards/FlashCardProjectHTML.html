@@ -4,277 +4,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="FlashCardProjectCSS.css" rel="stylesheet">
-    <script src="FlashCardProjectJS.js"></script>
-    <title>Card Function Test</title> 
+  <link href="FlashCardProjectCSS.css" rel="stylesheet">
+  <script src="FlashCardProjectJS.js"></script>
+  <title>Card Function Test</title>
 </head>
 <body>
-    <div>
-        <h1>CLI Command Flashcards</h1>
-    </div>
-    <style>
-      h1 {text-align: center}
-    </style>
-
-    <div class="row">
-      <div class="column">
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <h1 class="front">sudo</h1>
-            <p class="front"></p>
-          </div>
-          <div class="card-back">
-            <p class="back">Acronym for superuser do or subtitute user do. Sudo allows a user with proper permission to execute a command as another user.</p>
-            <p class="back"></p>
-          </div>
+  <div>
+    <h1>CLI Command Flashcards</h1>
+  </div>
+  <style>
+    h1 {
+      text-align: center
+    }
+  </style>
+  <div class="container-grid">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">sudo</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Acronym for superuser do or subtitute user do. Sudo allows a user with proper permission to execute a command as another user.</p>
+          <p class="back"></p>
         </div>
       </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">pwd</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Look at directory that you are in.</p>
+          <p class="back"></p>
+        </div>
       </div>
-
-      <div class="column">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <h1 class="front">pwd</h1>
-              <p class="front"></p>
-            </div>
-            <div class="card-back">
-              <p class="back">Look at directory that you are in.</p>
-              <p class="back"></p>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <div class="card-inner">
-              <div class="card-front">
-                <h1 class="front">cd</h1>
-                <p class="front"></p>
-              </div>
-              <div class="card-back">
-                <p class="back">Change directories/ go to home directory</p>
-                <p class="back"></p>
-              </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="column">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h1 class="front">ls</h1>
-                  <p class="front"></p>
-                </div>
-                <div class="card-back">
-                  <p class="back">list of directories.</p>
-                  <p class="back"></p>
-                </div>
-              </div>
-            </div>
-            </div>
-
     </div>
-
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <h1 class="front">mv</h1>
-              <p class="front"></p>
-            </div>
-            <div class="card-back">
-              <p class="back">Move a file (You can also rename it)</p>
-              <p class="back"></p>
-            </div>
-          </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">cd</h1>
+          <p class="front"></p>
         </div>
+        <div class="card-back">
+          <p class="back">Change directories/ go to home directory</p>
+          <p class="back"></p>
         </div>
-
-        <div class="column">
-          <div class="card">
-            <div class="card-inner">
-              <div class="card-front">
-                <h1 class="front">mkdir</h1>
-                <p class="front"></p>
-              </div>
-              <div class="card-back">
-                <p class="back">Make a directory.</p>
-                <p class="back"></p>
-              </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="column">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h1 class="front">rmdir</h1>
-                  <p class="front"></p>
-                </div>
-                <div class="card-back">
-                  <p class="back">Remove a directory</p>
-                  <p class="back"></p>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <div class="column">
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h1 class="front">rm</h1>
-                    <p class="front"></p>
-                  </div>
-                  <div class="card-back">
-                    <p class="back">Remove</p>
-                    <p class="back"></p>
-                  </div>
-                </div>
-              </div>
-              </div>
+      </div>
     </div>
-
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <h1 class="front">touch</h1>
-              <p class="front"></p>
-            </div>
-            <div class="card-back">
-              <p class="back">Create a file (Puts a date to it)</p>
-              <p class="back"></p>
-            </div>
-          </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">ls</h1>
+          <p class="front"></p>
         </div>
+        <div class="card-back">
+          <p class="back">list of directories.</p>
+          <p class="back"></p>
         </div>
-
-        <div class="column">
-          <div class="card">
-            <div class="card-inner">
-              <div class="card-front">
-                <h1 class="front">find</h1>
-                <p class="front"></p>
-              </div>
-              <div class="card-back">
-                <p class="back">The find command is used to search and locate the list of files and directories based on conditions you specify for files that match the arguments.</p>
-                <p class="back"></p>
-              </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="column">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h1 class="front">grep</h1>
-                  <p class="front"></p>
-                </div>
-                <div class="card-back">
-                  <p class="back">Acronym for Global Regular Expression Print. It is used to search for a string of characters in a specified file.</p>
-                  <p class="back"></p>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <div class="column">
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <h1 class="front">df</h1>
-                    <p class="front"></p>
-                  </div>
-                  <div class="card-back">
-                    <p class="back">Tells the user the difference between two files.</p>
-                    <p class="back"></p>
-                  </div>
-                </div>
-              </div>
-              </div>
-
+      </div>
     </div>
-
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <h1 class="front">du</h1>
-              <p class="front"></p>
-            </div>
-            <div class="card-back">
-              <p class="back">Stands for Disk Usage. The commands is used to check the information of disk usage of files and directories on a machine.</p>
-              <p class="back"></p>
-            </div>
-          </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">mv</h1>
+          <p class="front"></p>
         </div>
+        <div class="card-back">
+          <p class="back">Move a file (You can also rename it)</p>
+          <p class="back"></p>
         </div>
-
-        <div class="row">
-          <div class="column">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h1 class="front">head</h1>
-                  <p class="front"></p>
-                </div>
-                <div class="card-back">
-                  <p class="back">Inquire what is in front of a file.</p>
-                  <p class="back"></p>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <div class="row">
-              <div class="column">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front">
-                      <h1 class="front">tail</h1>
-                      <p class="front"></p>
-                    </div>
-                    <div class="card-back">
-                      <p class="back">Inquire what is in the end of a file.</p>
-                      <p class="back"></p>
-                    </div>
-                  </div>
-                </div>
-                </div>
-
-                <div class="row">
-                  <div class="column">
-                    <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <h1 class="front">diff</h1>
-                          <p class="front"></p>
-                        </div>
-                        <div class="card-back">
-                          <p class="back">Stands for difference. The command is used to display the differences in the files by comparing the files line by line.</p>
-                          <p class="back"></p>
-                        </div>
-                      </div>
-                    </div>
-                    </div>
-
-        
-
+      </div>
     </div>
-
-    
-      <p></p>
-      <div>
-        <a id="CLI_button" href="../index.html">Go back to CLI menu</a>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">mkdir</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Make a directory.</p>
+          <p class="back"></p>
+        </div>
+      </div>
     </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">rmdir</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Remove a directory</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">rm</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Remove</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">touch</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Create a file (Puts a date to it)</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">find</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">The find command is used to search and locate the list of files and directories based on conditions you specify for files that match the arguments.</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">grep</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Acronym for Global Regular Expression Print. It is used to search for a string of characters in a specified file.</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">df</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Tells the user the difference between two files.</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">du</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Stands for Disk Usage. The commands is used to check the information of disk usage of files and directories on a machine.</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">head</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Inquire what is in front of a file.</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">tail</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Inquire what is in the end of a file.</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1 class="front">diff</h1>
+          <p class="front"></p>
+        </div>
+        <div class="card-back">
+          <p class="back">Stands for difference. The command is used to display the differences in the files by comparing the files line by line.</p>
+          <p class="back"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div>
+    <a id="CLI_button" href="../index.html">Go back to CLI menu</a>
+  </div>
 </body>

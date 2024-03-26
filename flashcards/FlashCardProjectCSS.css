@@ -1,3 +1,11 @@
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-auto-rows: auto;
+  gap: 10px;
+  justify-content: center;
+}
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .card {
   background-color: transparent;
@@ -56,22 +64,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  max-width: 100%;
-  margin: auto;
-  padding: auto;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -81,26 +73,6 @@ body {
   background-color: #f1f1f1;
 }
 
-/* Responsive columns - two column layout (horizontal) on screens with a width up to 1300px */
-@media screen and (max-width: 1300px) {
-  .column {
-    width: 50%;
-    display: inline-block;
-    margin-right: 2%; /* Add some spacing between columns */
-    margin-bottom: 20px;
-    float: none; /* Clear the float */
-  }
-}
-
-/* Exception for screens with a width lower than 650px */
-@media screen and (max-width: 650px) {
-  .column:not(.exception) {
-    width: 100%;
-    display: block;
-    margin-right: 0; /* Remove any spacing between columns */
-  }
-}
-
 #CLI_button {
   border: 1px solid rgb(150, 147, 147);
   float: right;
@@ -108,3 +80,33 @@ body {
   left: 89%;
   color: rgb(6, 5, 5);
 }
+
+@media(max-width: 1245px){
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows: auto;
+    gap: 10px;
+    justify-content: center;
+  } 
+  }
+
+  @media(max-width: 936px){
+    .container-grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-auto-rows: auto;
+      gap: 10px;
+      justify-content: center;
+    } 
+  }
+
+  @media(max-width: 623px){
+    .container-grid {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      grid-auto-rows: auto;
+      gap: 10px;
+      justify-content: center;
+    } 
+  }

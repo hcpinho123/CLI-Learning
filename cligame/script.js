@@ -1,456 +1,277 @@
-window.addEventListener("DOMContentLoaded", domLoaded);
-//function for when the doc is loaded 
-function domLoaded() {
-    document.getElementById("enter").addEventListener("click", checkInput1);
-    document.getElementById("enter1").addEventListener("click", checkInput2);
-    document.getElementById("enter2").addEventListener("click", checkInput3);
-    document.getElementById("enter3").addEventListener("click", checkInput4);
-    document.getElementById("enter4").addEventListener("click", checkInput5);
-    document.getElementById("enter5").addEventListener("click", checkInput6);
-    document.getElementById("enter6").addEventListener("click", checkInput7);
-    document.getElementById("enter7").addEventListener("click", checkInput8);
-    document.getElementById("enter8").addEventListener("click", checkInput9);
-    document.getElementById("enter9").addEventListener("click", checkInput10);
-    document.getElementById("enter10").addEventListener("click", checkInput11);
-    document.getElementById("enter11").addEventListener("click", checkInput12);
-    document.getElementById("enter12").addEventListener("click", checkInput13);
-}
+var gameImage;
+
+document.addEventListener("DOMContentLoaded", function () {
+  gameImage = document.getElementById("gameImage");
+  document.getElementById("enter").addEventListener("click", checkInput1);
+});
 
 function checkInput1() {
+  var input_1 = document.getElementById("userInput").value;
+  if (input_1.toLowerCase() === "ls") {
+    document.getElementById("userInput").disabled = true;
+    document.getElementById("userInput").value = ""; // Clear the input field
+    document.getElementById("response_ls").innerHTML =
+      "<p> Hello! My name is George and today is my first day at Southern. Help me to explore the campus!" +
+      "<br>" +
+      "Locations: <br>" +
+      "Bietz-Center <br>" +
+      "Wright-Hall <br>" +
+      "<!--library <br>-->" +
+      "Talge-Hall" +
+      "</p>" +
+      '<input id="userInput1" type="text">' +
+      '<button id="enter1">enter</button>';
 
-    //ls and start of the game
-    var input_1 = document.getElementById("userInput").value
-    if (input_1 == "ls") [
-        document.getElementById("response_ls").style.visibility = "visible",
-        document.getElementById("userInput").disabled = true,
-        document.getElementById("pole").style.visibility = "visible"
-    ]
-
-    else
-        alert("please enter a valid input")
+    gameImage.src = "images/pole.jpg";
+    document.getElementById("enter1").addEventListener("click", checkInput2);
+  } else {
+    alert("please enter a valid input");
+  }
 }
+
 function checkInput2() {
-    // cd "locations" commands 
-    document.getElementById("pole").style.visibility = "hidden"
+  var input_2 = document.getElementById("userInput1").value;
+  if (input_2.toLowerCase() === "cd ..") {
+    document.getElementById("userInput1").disabled = true;
+    document.getElementById("response_ls").innerHTML = "";
+    document.getElementById("userInput").disabled = false;
+  } else if (input_2.toLowerCase() === "cd") {
+    document.getElementById("response_ls").innerHTML = "";
+    document.getElementById("userInput").disabled = false;
+    document.getElementById("next-input").innerHTML = "";
+  } else if (input_2 == "cd Bietz-Center") {
+    document.getElementById("userInput1").disabled = true;
+    document.getElementById("response_cd-bietz").innerHTML =
+      "<p> We are in the Bietz center, a place where studetns go to have fun and study. <br>" +
+      "locations: <br>" +
+      "<!--CK2 <br>-->" +
+      "Game-Room <br>" +
+      "<!--Fire-Room-->" +
+      "</p>" +
+      "<!--change user inputs-->" +
+      '<input id="userInput2" type="text">' +
+      '<button id="enter2">enter</button>';
 
-    var input_2 = document.getElementById("userInput1").value
-    if (input_2 == "cd ..") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = ""
-    ]
+    gameImage.src = "images/bietz.jpg";
+    document.getElementById("enter2").addEventListener("click", checkInput3);
+  } else if (input_2 == "cd Wright-Hall") {
+    document.getElementById("userInput1").disabled = true;
+    document.getElementById("response_cd-wright").innerHTML =
+      "<p> We are in the Wright-Hall, this is the administration of the college. A place where students can make <br>" +
+      "payments, and talk to advisors." +
+      "The cafeteria is also located in this building <br>" +
+      "locations: <br>" +
+      "Administration <br>" +
+      "Cafeteria" +
+      "</p>" +
+      '<input id="userInput2" type="text">' +
+      '<button id="enter2">enter</button>';
 
-    else if (input_2 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = ""
-    ]
+    gameImage.src = "images/wright.png";
+    document.getElementById("enter2").addEventListener("click", checkInput3);
+  } else if (input_2 == "cd Talge-Hall") {
+    document.getElementById("userInput1").disabled = true;
+    document.getElementById("response_cd-wright").innerHTML =
+      "<p> Welcome to Talge Hall here is located your dorm. <br>" +
+      "locations: <br>" +
+      "Bedroom" +
+      "</p>" +
+      '<input id="userInput2" type="text">' +
+      '<button id="enter2">enter</button>';
 
-    else if (input_2 == "cd Bietz-Center") [
-        document.getElementById("response_cd-bietz").style.visibility = "visible",
-        document.getElementById("userInput1").disabled = true,
-        document.getElementById("Bietz").style.visibility = "visible"
-    ]
-
-    else if (input_2 == "cd Wright-Hall") [
-        document.getElementById("response_cd-wright").style.visibility = "visible",
-        document.getElementById("userInput1").disabled = true,
-        document.getElementById("WrightHall").style.visibility = "visible"
-    ]
-
-    else if (input_2 == "cd Talge-Hall") [
-        document.getElementById("response_cd-talge").style.visibility = "visible",
-        document.getElementById("userInput1").disabled = true,
-        document.getElementById("TalgeHall").style.visibility = "visible"
-    ]
-
-    else
-        alert("please enter a valid input")
-
+    gameImage.src = "images/talge.png";
+    document.getElementById("enter2").addEventListener("click", checkInput3);
+  } 
+  else {
+    alert("please enter a valid input");
+  }
 }
-
 
 function checkInput3() {
-    // cd "locations" commands 
-    document.getElementById("Bietz").style.visibility = "hidden"
+  var input_3 = document.getElementById("userInput2").value;
+  if (input_3.toLowerCase() === "cd ..") {
+    document.getElementById("response_cd-bietz").innerHTML = "";
+    document.getElementById("response_cd-talge").innerHTML = "";
+    document.getElementById("response_cd-wright").innerHTML = "";
+    document.getElementById("userInput1").value = "";
+    document.getElementById("userInput1").disabled = false;
+  } else if (input_3.toLowerCase() === "cd") {
+    document.getElementById("response_ls").innerHTML = "";
+    document.getElementById("userInput").disabled = false;
 
-    var input_3 = document.getElementById("userInput2").value
-    if (input_3 == "cd ..") [
-        document.getElementById("response_cd-bietz").style.visibility = "hidden",
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput2").value = "",
-        document.getElementById("pole").style.visibility = "visible"
-    ]
+    document.getElementById("response_cd-bietz").innerHTML = "";
+    document.getElementById("response_cd-talge").innerHTML = "";
+    document.getElementById("response_cd-wright").innerHTML = "";
+    document.getElementById("userInput1").value = "";
+    document.getElementById("userInput1").disabled = false;
+  } else if (input_3 == "cd Game-Room") {
+    document.getElementById("userInput2").disabled = true;
+    document.getElementById("response_cd-game").innerHTML =
+      "<p> We are in the Game Room, a place where studetns go to play games like pool, ping pong, and fussball <br>" +
+      "It looks like there is having a pool championship! <br>" +
+      "items: <br>" +
+      "pool" +
+      "</p>" +
+      '<input id="userInput3" type="text">' +
+      '<button id="enter3">enter</button>';
 
-    else if (input_3 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-bietz").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput2").value = "",
-        document.getElementById("userInput1").disabled = false
-    ]
+    gameImage.src = "images/gameroom.png";
+    document.getElementById("enter3").addEventListener("click", checkInput4);
+  } else if (input_3 == "cd Administration") {
+    document.getElementById("userInput2").disabled = true;
+    document.getElementById("response_cd-admnistration").innerHTML =
+      "<p> We are in the Administration. Here students can get their student ID to unlock their bedroom and buy" +
+      "food<br>" +
+      "Items: <br>" +
+      "Student-ID" +
+      "</p>" +
+      '<input id="userInput3" type="text">' +
+      '<button id="enter3">enter</button>';
 
-    else if (input_3 == "cd Game-Room") [
-        document.getElementById("response_cd-game").style.visibility = "visible",
-        document.getElementById("userInput2").disabled = true,
-        document.getElementById("GameRoom").style.visibility = "visible"
-    ]
+    gameImage.src = "images/admin.png";
+    document.getElementById("enter3").addEventListener("click", checkInput4);
+  } else if (input_3 == "cd Cafeteria") {
+    document.getElementById("userInput2").disabled = true;
+    document.getElementById("response_cd-cafeteria").innerHTML =
+      "<p>We are in the cafeteria where students can buy and eat food </p>" +
+      '<input id="userInput3" type="text">' +
+      '<button id="enter3">enter</button>';
 
-    else
-        alert("please enter a valid input")
+    gameImage.src = "images/Cafeteria.png";
+    document.getElementById("enter3").addEventListener("click", checkInput4);
+  } else if (input_3 == "cd Bedroom") {
+    document.getElementById("userInput2").disabled = true;
+    document.getElementById("response_cd-Bedroom").innerHTML =
+      "<p> Welcome to your bedroom. Use (hint use command to move objects) your ID to unlock the door. <br>" +
+      "If you don't have one, try to find it somewhere in the game" +
+      "</p>" +
+      '<input id="userInput3" type="text">' +
+      '<button id="enter3">enter</button>';
 
+    gameImage.src = "images/bedroom.png";
+    document.getElementById("enter3").addEventListener("click", checkInput4);
+  } else {
+    alert("please enter a valid input");
+  }
 }
 
 function checkInput4() {
+  var input_4 = document.getElementById("userInput3").value;
+  if (input_4.toLowerCase() == "cd ..") {
+    document.getElementById("response_cd-game").innerHTML = "";
+    document.getElementById("response_cd-admnistration").innerHTML = "";
+    document.getElementById("response_cd-cafeteria").innerHTML = "";
+    document.getElementById("response_cd-Bedroom").innerHTML = "";
+    document.getElementById("userInput2").value = "";
+    document.getElementById("userInput2").disabled = false;
+  } else if (input_4.toLowerCase() === "cd") {
+    document.getElementById("response_ls").innerHTML = "";
+    document.getElementById("userInput").disabled = false;
 
-    document.getElementById("GameRoom").style.visibility = "hidden"
+    document.getElementById("response_cd-bietz").innerHTML = "";
+    document.getElementById("response_cd-talge").innerHTML = "";
+    document.getElementById("response_cd-wright").innerHTML = "";
 
-    var input_4 = document.getElementById("userInput3").value
-    if (input_4 == "cd ..") [
-        document.getElementById("response_cd-game").style.visibility = "hidden",
-        document.getElementById("userInput2").value = "",
-        document.getElementById("userInput2").disabled = false,
-        document.getElementById("userInput3").value = "",
-        document.getElementById("Bietz").style.visibility = "visible"
-    ]
+    document.getElementById("response_cd-game").innerHTML = "";
+    document.getElementById("response_cd-admnistration").innerHTML = "";
+    document.getElementById("response_cd-cafeteria").innerHTML = "";
+    document.getElementById("response_cd-Bedroom").innerHTML = "";
+  } else if (input_4 == "less pool") {
+    document.getElementById("userInput3").disabled = true;
+    document.getElementById("response_less-pool").innerHTML =
+      "<p>We enter the pool tournament and won it!! Lets see our prise <br>" +
+      "Items: <br>" +
+      "prise" +
+      "</p>" +
+      '<input id="userInput4" type="text">' +
+      '<button id="enter4">enter</button>';
 
-    else if (input_4 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-bietz").style.visibility = "hidden",
-        document.getElementById("response_cd-game").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput2").value = "",
-        document.getElementById("userInput2").disabled = false,
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput3").value = ""
-    ]
+    gameImage.src = "images/medal.png";
+    document.getElementById("enter4").addEventListener("click", checkInput5);
+  } else if (input_4 == "less Student-ID") {
+    document.getElementById("userInput3").disabled = true;
+    document.getElementById("response_less-Student-ID").innerHTML =
+      '<p> You got your Student-ID. Your id is "123". Use it to buy food and unlock your room' +
+      "</p>" +
+      '<input id="userInput4" type="text">' +
+      '<button id="enter4">enter</button>';
 
-    else if (input_4 == "less pool") [
-        document.getElementById("response_less-pool").style.visibility = "visible",
-        document.getElementById("userInput3").disabled = true,
-        document.getElementById("medal").style.visibility = "visible"
-    ]
+    gameImage.src = "images/id.png";
+    document.getElementById("enter4").addEventListener("click", checkInput5);
+  } else if (input_4 == "mv 123") {
+    document.getElementById("userInput3").disabled = true;
+    document.getElementById("response_mv-123").innerHTML =
+      "<p> Congratulations!!! You won the game!!! Press cd to restart</p>" +
+      '<input id="userInput4" type="text">' +
+      '<button id="enter4">enter</button>';
 
-    else
-        alert("please enter a valid input")
+    gameImage.src = "images/trophy.png";
+    document.getElementById("enter4").addEventListener("click", checkInput5);
+  } else {
+    alert("please enter a valid input");
+  }
 }
 
 function checkInput5() {
-    document.getElementById("medal").style.visibility = "hidden"
+  var input_5 = document.getElementById("userInput4").value;
+  if (input_5.toLowerCase() == "cd ..") {
+    document.getElementById("response_less-pool").innerHTML = "";
+    document.getElementById("response_less-Student-ID").innerHTML = "";
+    document.getElementById("response_mv-123").innerHTML = "";
+    document.getElementById("userInput3").value = "";
+    document.getElementById("userInput3").disabled = false;
+  } else if (input_5.toLowerCase() === "cd") {
+    document.getElementById("response_ls").innerHTML = "";
+    document.getElementById("userInput").disabled = false;
 
-    var input_5 = document.getElementById("userInput4").value
-    if (input_5 == "cd ..") [
-        document.getElementById("response_less-pool").style.visibility = "hidden",
-        document.getElementById("userInput3").value = "",
-        document.getElementById("userInput3").disabled = false,
-        document.getElementById("userInput4").value = "",
-        document.getElementById("GameRoom").style.visibility = "visible"
-    ]
+    document.getElementById("response_cd-bietz").innerHTML = "";
+    document.getElementById("response_cd-talge").innerHTML = "";
+    document.getElementById("response_cd-wright").innerHTML = "";
 
-    else if (input_5 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-bietz").style.visibility = "hidden",
-        document.getElementById("response_cd-game").style.visibility = "hidden",
-        document.getElementById("response_less-pool").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput2").value = "",
-        document.getElementById("userInput2").disabled = false,
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput3").value = "",
-        document.getElementById("userInput3").disabled = false,
-        document.getElementById("userInput4").value = ""
-    ]
+    document.getElementById("response_cd-game").innerHTML = "";
+    document.getElementById("response_cd-admnistration").innerHTML = "";
+    document.getElementById("response_cd-cafeteria").innerHTML = "";
+    document.getElementById("response_cd-Bedroom").innerHTML = "";
 
-    else if (input_5 == "less prise") [
-        document.getElementById("response_less-prise").style.visibility = "visible",
-        document.getElementById("userInput4").disabled = true,
-        document.getElementById("prise").style.visibility = "visible"
-    ]
+    document.getElementById("response_less-pool").innerHTML = "";
+    document.getElementById("response_less-Student-ID").innerHTML = "";
+    document.getElementById("response_mv-123").innerHTML = "";
+  } else if (input_5 == "less prise") {
+    document.getElementById("userInput4").disabled = true;
+    document.getElementById("response_less-prise").innerHTML =
+      '<p>You unlock a hint! "Go to Wright Hall to get your room key</p>' +
+      '<input id="userInput5" type="text">' +
+      '<button id="enter5">enter</button>';
 
-    else
-        alert("please enter a valid input")
+    gameImage.src = "images/prise.png";
+    document.getElementById("enter5").addEventListener("click", checkInput6);
+  } else {
+    alert("please enter a valid input");
+  }
 }
-
 function checkInput6() {
-    document.getElementById("prise").style.visibility = "hidden"
+  var input_5 = document.getElementById("userInput4").value;
+  if (input_5.toLowerCase() == "cd ..") {
+    document.getElementById("response_less-prise").innerHTML = "";
+    document.getElementById("userInput4").value = "";
+    document.getElementById("userInput4").disabled = false;
+  } else if (input_5.toLowerCase() === "cd") {
+    document.getElementById("response_ls").innerHTML = "";
+    document.getElementById("userInput").disabled = false;
 
-    var input_6 = document.getElementById("userInput5").value
-    if (input_6 == "cd ..") [
-        document.getElementById("response_less-prise").style.visibility = "hidden",
-        document.getElementById("userInput4").value = "",
-        document.getElementById("userInput4").disabled = false,
-        document.getElementById("userInput5").value = "",
-        document.getElementById("medal").style.visibility = "visible"
-    ]
+    document.getElementById("response_cd-bietz").innerHTML = "";
+    document.getElementById("response_cd-talge").innerHTML = "";
+    document.getElementById("response_cd-wright").innerHTML = "";
 
-    else if (input_6 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-bietz").style.visibility = "hidden",
-        document.getElementById("response_cd-game").style.visibility = "hidden",
-        document.getElementById("response_less-pool").style.visibility = "hidden",
-        document.getElementById("response_less-prise").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput2").value = "",
-        document.getElementById("userInput2").disabled = false,
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput3").value = "",
-        document.getElementById("userInput3").disabled = false,
-        document.getElementById("userInput4").value = "",
-        document.getElementById("userInput4").disabled = false,
-        document.getElementById("userInput5").value = ""
-    ]
+    document.getElementById("response_cd-game").innerHTML = "";
+    document.getElementById("response_cd-admnistration").innerHTML = "";
+    document.getElementById("response_cd-cafeteria").innerHTML = "";
+    document.getElementById("response_cd-Bedroom").innerHTML = "";
 
-    else
-        alert("please enter a valid input")
+    document.getElementById("response_less-pool").innerHTML = "";
+    document.getElementById("response_less-Student-ID").innerHTML = "";
+    document.getElementById("response_mv-123").innerHTML = "";
+
+    document.getElementById("response_less-prise").innerHTML = "";
+  }
 }
-
-//wright hall
-function checkInput7() {
-    document.getElementById("WrightHall").style.visibility = "hidden"
-    var input_7 = document.getElementById("userInput6").value
-
-    if (input_7 == "cd ..") [
-        document.getElementById("response_cd-wright").style.visibility = "hidden",
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput6").value = "",
-        document.getElementById("pole").style.visibility = "visible"
-    ]
-
-    else if (input_7 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-wright").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput6").value = ""
-    ]
-
-    else if (input_7 == "cd Administration") [
-        document.getElementById("response_cd-admnistration").style.visibility = "visible",
-        document.getElementById("userInput6").disabled = true,
-        document.getElementById("admin").style.visibility = "visible"
-    ]
-
-    else if (input_7 == "cd Cafeteria") [
-        document.getElementById("response_cd-cafeteria").style.visibility = "visible",
-        document.getElementById("userInput6").disabled = true,
-        document.getElementById("Cafeteria").style.visibility = "visible"
-    ]
-
-    else
-        alert("please enter a valid input")
-}
-
-//Administration 
-function checkInput8() {
-    document.getElementById("admin").style.visibility = "hidden"
-
-    var input_8 = document.getElementById("userInput7").value
-    if (input_8 == "cd ..") [
-        document.getElementById("response_cd-admnistration").style.visibility = "hidden",
-        document.getElementById("userInput6").value = "",
-        document.getElementById("userInput6").disabled = false,
-        document.getElementById("userInput7").value = "",
-        document.getElementById("WrightHall").style.visibility = "visible"
-    ]
-
-    else if (input_8 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-wright").style.visibility = "hidden",
-        document.getElementById("response_cd-admnistration").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput6").value = "",
-        document.getElementById("userInput6").disabled = false,
-        document.getElementById("userInput7").value = ""
-    ]
-
-    else if (input_8 == "less Student-ID") [
-        document.getElementById("response_less-Student-ID").style.visibility = "visible",
-        document.getElementById("userInput7").disabled = true,
-        document.getElementById("student-id").style.visibility = "visible"
-    ]
-
-    else
-        alert("please enter a valid input")
-
-}
-
-function checkInput9() {
-    document.getElementById("student-id").style.visibility = "hidden"
-
-    var input_9 = document.getElementById("userInput8").value
-    if (input_9 == "cd ..") [
-        document.getElementById("response_less-Student-ID").style.visibility = "hidden",
-        document.getElementById("userInput7").value = "",
-        document.getElementById("userInput7").disabled = false,
-        document.getElementById("userInput8").value = "",
-        document.getElementById("admin").style.visibility = "visible"
-    ]
-
-    else if (input_9 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-wright").style.visibility = "hidden",
-        document.getElementById("response_cd-admnistration").style.visibility = "hidden",
-        document.getElementById("response_less-Student-ID").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput6").value = "",
-        document.getElementById("userInput6").disabled = false,
-        document.getElementById("userInput7").value = "",
-        document.getElementById("userInput7").disabled = false,
-        document.getElementById("userInput8").value = ""
-    ]
-
-    else
-        alert("please enter a valid input")
-}
-
-function checkInput10() {
-    document.getElementById("TalgeHall").style.visibility = "hidden"
-
-    var input_10 = document.getElementById("userInput9").value
-    if (input_10 == "cd ..") [
-        document.getElementById("response_cd-talge").style.visibility = "hidden",
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput9").value = "",
-        document.getElementById("pole").style.visibility = "visible"
-    ]
-
-    else if (input_10 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-talge").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput9").value = ""
-    ]
-
-    else if (input_10 == "cd Bedroom") [
-        document.getElementById("response_cd-Bedroom").style.visibility = "visible",
-        document.getElementById("userInput9").disabled = true,
-        document.getElementById("bedrooom").style.visibility = "visible"
-    ]
-
-    else
-        alert("please enter a valid input")
-}
-
-function checkInput11() {
-    document.getElementById("bedrooom").style.visibility = "hidden"
-
-    var input_11 = document.getElementById("userInput10").value
-    if (input_11 == "cd ..") [
-        document.getElementById("response_cd-Bedroom").style.visibility = "hidden",
-        document.getElementById("userInput9").value = "",
-        document.getElementById("userInput9").disabled = false,
-        document.getElementById("userInput10").value = "",
-        document.getElementById("TalgeHall").style.visibility = "visible"
-    ]
-
-    else if (input_11 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-talge").style.visibility = "hidden",
-        document.getElementById("response_cd-Bedroom").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput9").value = "",
-        document.getElementById("userInput9").disabled = false,
-        document.getElementById("userInput10").value = ""
-    ]
-
-    else if (input_11 == "mv 123") [
-        document.getElementById("response_mv-123").style.visibility = "visible",
-        document.getElementById("userInput10").disabled = true,
-        document.getElementById("trophy").style.visibility = "visible"
-    ]
-
-    else
-        alert("please enter a valid input")
-}
-
-function checkInput12() {
-    document.getElementById("trophy").style.visibility = "hidden"
-
-    var input_12 = document.getElementById("userInput11").value
-    if (input_12 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-talge").style.visibility = "hidden",
-        document.getElementById("response_cd-Bedroom").style.visibility = "hidden",
-        document.getElementById("response_mv-123").style.visibility = "hidden",
-
-
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput9").value = "",
-        document.getElementById("userInput9").disabled = false,
-        document.getElementById("userInput10").value = "",
-        document.getElementById("userInput10").disabled = false,
-        document.getElementById("userInput11").value = ""
-    ]
-
-    else
-        alert("please enter a valid input")
-}
-
-function checkInput13() {
-    document.getElementById("Cafeteria").style.visibility = "hidden"
-    var input_13 = document.getElementById("userInput12").value
-
-    if (input_13 == "cd ..") [
-        document.getElementById("response_cd-cafeteria").style.visibility = "hidden",
-        document.getElementById("userInput6").value = "",
-        document.getElementById("userInput6").disabled = false,
-        document.getElementById("userInput12").value = "",
-        document.getElementById("WrightHall").style.visibility = "visible"
-    ]
-
-    else if (input_13 == "cd") [
-        document.getElementById("response_ls").style.visibility = "hidden",
-        document.getElementById("response_cd-wright").style.visibility = "hidden",
-        document.getElementById("response_cd-cafeteria").style.visibility = "hidden",
-        document.getElementById("userInput").value = "",
-        document.getElementById("userInput").disabled = false,
-        document.getElementById("userInput1").value = "",
-        document.getElementById("userInput1").disabled = false,
-        document.getElementById("userInput6").value = "",
-        document.getElementById("userInput6").disabled = false,
-        document.getElementById("userInput12").value = ""
-    ]
-
-
-}
-
-
-
-
-
-
-
-
-
-
-

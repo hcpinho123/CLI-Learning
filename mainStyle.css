@@ -8,9 +8,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   min-height: 100vh;
   font-family: Hack, monospace;
+  text-align: center;
 }
 
 div {
@@ -89,21 +89,20 @@ nav .menuItems li a:hover::before {
 }
 
 /* Add a media query for screens with a max width of 768px */
+
 @media screen and (max-width: 768px) {
-  body {
-    text-align: center; /* Center align the content */
-  }
-
   p {
-    font-size: 50px; /* Reduce the font size for smaller screens */
+    font-size: 50px;
+    /* Reduce the font size for smaller screens */
   }
 
-  a{
+  a {
     font-size: 15px !important;
   }
 
   nav .menuItems {
-    flex-direction: column; /* Stack menu items vertically */
+    flex-direction: column;
+    /* Stack menu items vertically */
     margin: 0;
     padding: 0;
   }

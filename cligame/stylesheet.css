@@ -5,11 +5,37 @@
     font-size: 15px;
 }
 
-#cli-menu {
+.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 50%) minmax(0, 50%);
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
+.content {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    margin-left: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cli-menu {
+    margin-top: 10px;
     border: 1px solid white;
-    position: fixed;
-    bottom: 0;
-    right: 5px;
+}
+
+.cli-menu a {
     color: white;
 }
 
@@ -17,178 +43,17 @@ input {
     border-radius: 2px;
     border-color: aliceblue;
     width: 200px;
-    color: green;
-}
-
-#pole {
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed; 
-}
-
-#Bietz {
-    width: 400px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed;
-}
-
-#GameRoom{
-    width: 400px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed;
-}
-
-#WrightHall{
-    width: 400px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed;
-}
-
-#Cafeteria{
-    width: 400px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed;
-}
-
-#student-id {
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed; 
-}
-
-#admin {
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed;   
-}
-
-#TalgeHall{
-    width: 300px;
-    height: 400px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed;
-}
-
-#bedrooom{
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed; 
-}
-
-#trophy {
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed;   
-}
-
-#medal {
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed; 
-}
-
-#prise {
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    bottom: 30px;
-    position: fixed; 
-}
-
-#response_ls {
-    visibility: hidden
-}
-
-#response_cd-bietz {
-   position: absolute;
-    visibility: hidden
-}
-
-#response_cd-wright{
-    position: absolute;
-    visibility: hidden
-}
-
-#response_cd-cafeteria{
-    position: absolute;
-    top: 76%;
-    visibility: hidden
-}
-
-#response_cd-admnistration{
-   position: absolute;
-   top: 78%;
-   visibility: hidden
-}
-
-#response_less-Student-ID {
-    position: absolute;
-    top: 90%;
-    visibility: hidden
-}
-
-#response_cd-talge {
-    position: absolute;
-    top: 58%;
-    visibility: hidden  
-}
-
-#response_cd-Bedroom{
-    position: absolute;
-    top: 75%;
-    visibility: hidden  
-}
-
-#response_mv-123 {
-    position: absolute;
-    top: 90%;
-    visibility: hidden  
-}
-
-#response_cd-game{
-   position: absolute;
-   top: 73%;
-    visibility: hidden
-}
-
-#response_less-pool{
-    position: absolute;
-    top: 92%;
-    visibility: hidden
-}
-
-#response_less-prise{
-    position: absolute;
-    top: 108%;
-    visibility: hidden
-}
-
-@media screen and (max-width: 650px) {
-img{
-    width: 150px !important;
-    height: 150px !important;
-}
+    color: white;
 }
 
 
+
+@media screen and (max-width: 630px) {
+    * {
+        font-size: 12px;
+    }
+    .image img {
+        max-width: 80%;
+        height: auto;
+    }
+}
